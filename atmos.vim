@@ -15,20 +15,23 @@ syn region  Comment   start=/;;;$/ end=/;;;$/
 syn region  String    start=/\v"/ skip=/\v(\\[\\"]){-1}/ end=/\v"/
 syn match   String    "'.'"
 "syntax region String start=/\v'/ skip=/\v(\\[\\"]){-1}/ end=/\v'/
+syn region  String    start='"' end='"'
 
 syn match   Constant  '\d\+'
 syn keyword Constant  false nil true
 
 syn keyword Function  dump error pub
-syn keyword Function  print require type
+syn keyword Function  assert print require type
 
 syn keyword Function  copy
 "syn match   Function  '\<\(to\|random\|math\)'
 "syn match   Function  '\<\(pico\|iup\)'
 
-syn match   Type      ':[a-zA-Z0-9'?!\.\-]\+'
+syn match   Type      "'[^:]:[a-zA-Z0-9\.]\+'
 
 syn match   Statement '[\+\-\*\/\%\>\<\=\|\&\~]'
+
+syn keyword Statement it
 
 syn keyword Statement await break catch coro defer do
 syn keyword Statement else emit escape every false func if ifs
@@ -43,4 +46,3 @@ syn keyword Statement watching where
 syn keyword Statement coroutine
 
 syn keyword Todo      TODO FIXME XXX
-syn region  String    start='"' end='"'
