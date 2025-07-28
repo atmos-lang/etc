@@ -27,7 +27,7 @@ syn keyword Function  copy
 "syn match   Function  '\<\(to\|random\|math\)'
 "syn match   Function  '\<\(pico\|iup\)'
 
-syn match   Type      "'[^:]:[a-zA-Z0-9\.]\+'
+syn match   Type      ':[a-zA-Z0-9\.]\+'
 
 syn match   Statement '[\+\-\*\/\%\>\<\=\|\&\~]'
 
