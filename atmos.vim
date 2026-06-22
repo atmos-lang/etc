@@ -33,13 +33,9 @@ syn match   Statement '[\+\-\*\/\%\>\<\=\|\&\~]'
 
 syn keyword Statement it
 
-syn keyword Statement abort await break catch coro defer do
-syn keyword Statement else emit escape every false func if ifs
-syn keyword Statement in loop match nil par par_and par_or
-syn keyword Statement pin resume return set spawn status task
-syn keyword Statement tasks test toggle thread throw true until
-syn keyword Statement val var yield watching where with while
-
-syn keyword Statement skip
+syn keyword Statement await break catch defer do else emit escape false func
+syn keyword Statement if ifs in loop match nil on par pin return set spawn task
+syn keyword Statement tasks test thread throw toggle true until val var
+syn keyword Statement watching where while with
 
 syn keyword Todo      TODO FIXME XXX
